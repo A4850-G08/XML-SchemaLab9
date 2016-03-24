@@ -46,5 +46,13 @@ and open the template in the editor.
 			<xs:enumeration value="FRI"/>
 		</xs:restriction>
 	</xs:simpleType>
+	
+	<!-- weekdays have to be one of five-->
+	<xs:simpleType name="roomT">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([A-Z]{2})\d{1,2}\s\d{3,4}" /> 
+		</xs:restriction>
+	</xs:simpleType>
+	
 
 </xs:schema>
