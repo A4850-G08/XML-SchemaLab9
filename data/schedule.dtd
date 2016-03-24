@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+DTD for master.xml
+Structured for days, timeslots, and courses
+-->
+
+<!-- Timetable element contains days, timeslots, and courses -->
+<!ELEMENT timetable (days|timeslots|courses)+>
+
+<!--************************************************-->
+<!--***********************Day**********************-->
+<!--************************************************-->
+
+<!-- Days element contains days of the week -->
+<!ELEMENT days (day)+>
+
+<!-- Day element contains timeslot, course, and booking -->
+<!ELEMENT day (booking|EMPTY)*>
+
+<!-- Day attributes contains days of the week -->
+<!ATTLIST day weekday (MON|TUE|WED|THU|FRI) #REQUIRED>
+
+<!--************************************************-->
+<!--********************Timeslot********************-->
+<!--************************************************-->
+
+<!-- Timeslots element contains timeslots of the week -->
+<!ELEMENT timeslots (timeslot)+>
+
+<!-- Timeslot element contains timetable data -->
+<!ELEMENT timeslot (booking|EMPTY)*>
+
+<!-- Timeslot attributes contains start and end time -->
+<!ATTLIST timeslot
+    start	CDATA	#REQUIRED
+    end		CDATA	#REQUIRED
+  >
+
+<!--************************************************-->
+<!--*********************Course*********************-->
+<!--************************************************-->
+
+<!-- Courses element contains courses of the week -->
+<!ELEMENT courses (course)+>
+
+<!-- Course element contains booking or timeslot -->
+<!ELEMENT course (booking)*>
+
+<!-- Course attribute contains course code -->
+<!ATTLIST course courseCode CDATA #REQUIRED>
+
+<!--************************************************-->
+<!--*************Attributes in Booking**************-->
+<!--************************************************-->
+
+<!-- Booking element contains unique timetable information -->
+<!ELEMENT booking (((day, timeslot)|(timeslot, courseCode)|(day, courseCode)), courseType, room, instructor)>
+
+<!-- Booking element contains room and instructor -->
+<!ELEMENT courseCode (#PCDATA)>
+
+<!-- Booking element contains room and instructor -->
+<!ELEMENT courseType (#PCDATA)>
+
+<!-- Room element contains room number -->
+<!ELEMENT room (#PCDATA)>
+
+<!-- Instructor element contains instructor name -->
+<!ELEMENT instructor (#PCDATA)>
+
