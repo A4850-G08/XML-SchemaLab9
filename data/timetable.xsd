@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+		   xmlns:xs="http://www.w3.org/2001/XMLSchema"
+		   elementFormDefault="qualified">
+	<!-- start is 4 digit time-->
+	<xs:simpleType name="startT">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-2][0-9][0-5][0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- end is a 4 digit time-->
+	<xs:simpleType name="endT">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-2][0-9][0-5][0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- courseType have to be one of two-->
+	<xs:simpleType name="courseTypeT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Lab"/>
+			<xs:enumeration value="Lec"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- courseCode is a 4 digit number-->
+	<xs:simpleType name="courseCodeT">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="[0-9][0-9][0-9][0-9]" />
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- weekdays have to be one of five-->
+	<xs:simpleType name="weekdayT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MON"/>
+			<xs:enumeration value="TUE"/>
+			<xs:enumeration value="WED"/>
+			<xs:enumeration value="THU"/>
+			<xs:enumeration value="FRI"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+</xs:schema>
