@@ -1,13 +1,24 @@
-<?xml version="1.0"?>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+<?xml version="1.0" encoding="UTF-8"?>
 
 <xs:schema	version="1.0"
 			xmlns:xs="http://www.w3.org/2001/XMLSchema"
 			elementFormDefault="qualified">
+	
+	<!--***********************************************************
+	*************************XML Data Structure *******************
+	************************************************************-->
+	
+	<!--instructor element will have first and last name of an instructor 
+	which will be defined in xml-->
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="instructor" type="personType"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--***********************************************************
+	*******************Data Types needed for validation************
+	************************************************************-->
 	
 	<!-- weekdays have to be one of five-->
 	<xs:simpleType name="weekdayT">
@@ -26,14 +37,6 @@ and open the template in the editor.
 			<xs:pattern value="[0-2][0-9][0-5][0-9]" />
 		</xs:restriction>
 	</xs:simpleType>
-	
-	<!--instructor element will have first and last name of an instructor 
-	which will be defined in xml-->
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="instructor" type="personType"/>
-		</xs:sequence>
-	</xs:complexType>
 	
 	<!-- person type is a string>-->
 	<xs:complexType name="personType">
