@@ -2,7 +2,323 @@
 
 <timetable xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="timetable.xsd">
 	<!-- 3 different faucets-->
-	&days;
-	&timeslots;
-	&courses;
+	<days>
+		<day weekday="MON">
+			<booking>
+				<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
+				<courseCode>4650</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1530" end="1620">15:30 to 16:20</timeslot>
+				<courseCode>4910</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2005</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1630" end="1720">16:30 to 17:20</timeslot>
+				<courseCode>4650</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+		</day>
+		<day weekday="TUE">
+			<booking>
+				<timeslot start="0830" end="1020">08:30 to 10:20</timeslot>
+				<courseCode>4620</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1230" end="1320">12:30 to 13:20</timeslot>
+				<courseCode>4650</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1530" end="1720">15:30 to 17:20</timeslot>
+				<courseCode>4620</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2020</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+		</day>
+		<day weekday="WED">
+			<booking>
+				<timeslot start="1230" end="1420">12:30 to 14:20</timeslot>
+				<courseCode>4850</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-207</room>
+				<instructor>James Parry</instructor>
+			</booking>
+		</day>
+		<day weekday="THU">
+			<booking>
+				<timeslot start="0930" end="1020">09:30 to 10:20</timeslot>
+				<courseCode>4910</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-1205</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
+				<courseCode>4910</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1330" end="1520">13:30 to 15:20</timeslot>
+				<courseCode>4850</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-308</room>
+				<instructor>James Parry</instructor>
+			</booking>
+		</day>
+		<day weekday="FRI">
+			<booking>
+				<timeslot start="0830" end="1020">08:30 to 10:20</timeslot>
+				<courseCode>4660</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW9-206</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
+				<courseCode>4770</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Trevor Lord</instructor>
+			</booking>
+			<booking>
+				<timeslot start="1330" end="1530">13:30 to 15:30</timeslot>
+				<courseCode>4660</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+		</day>
+	</days>
+	<timeslots>
+		<timeslot start="0830" end="10:20">
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<courseCode>4620</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+			<booking>
+				<day weekday="FRI"></day>
+				<courseCode>4660</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW9-206</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="0930" end="10:20">
+			<booking>
+				<day weekday="THU">Thursday</day>
+				<courseCode>4910</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-1205</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1030" end="12:20">
+			<booking>
+				<day weekday="MON">Monday</day>
+				<courseCode>4650</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<courseCode>4910</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<day weekday="FRI">Friday</day>
+				<courseCode>4770</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Trevor Lord</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1230" end="13:20">
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<courseCode>4650</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1230" end="14:20">
+			<booking>
+				<day weekday="WED">Wednesday</day>
+				<courseCode>4850</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-207</room>
+				<instructor>James Parry</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1330" end="15:20">
+			<booking>
+				<day weekday="THU">Thursday</day>
+				<courseCode>4850</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-308</room>
+				<instructor>James Parry</instructor>
+			</booking>
+			<booking>
+				<day weekday="FRI">Friday</day>
+				<courseCode>4660</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-206</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1530" end="16:20">
+			<booking>
+				<day weekday="MON">Monday</day>
+				<courseCode>4910</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2005</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1630" end="17:20">
+			<booking>
+				<day weekday="MON">Monday</day>
+				<courseCode>4650</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+		</timeslot>
+		<timeslot start="1530" end="17:20">
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<courseCode>4620</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2020</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+		</timeslot>
+	</timeslots>
+	<courses>
+		<course courseCode="4910">
+			<booking>
+				<day weekday="MON">Monday</day>
+				<timeslot start="1530" end="16:20">15:30 to 16:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SW1-2005</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<day weekday="THU">Thursday</day>
+				<timeslot start="0930" end="10:20">09:30 to 10:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SW5-1840</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<day weekday="THU">Thursday</day>
+				<timeslot start="1530" end="16:20">15:30 to 6:20</timeslot>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+		</course>
+		<course courseCode="4660">
+			<booking>
+				<day weekday="FRI">Friday</day>
+				<timeslot start="0830" end="10:20">08:30 to 10:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SW9-206</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+			<booking>
+				<day weekday="FRI">Friday</day>
+				<timeslot start="13:30" end="15:20">13:30 to 15:20</timeslot>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+		</course>
+		<course courseCode="4770">
+			<booking>
+				<day weekday="FRI">Friday</day>
+				<timeslot start="1030" end="12:20">10:30 to 12:20</timeslot>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Trevor Lord</instructor>
+			</booking>
+		</course>
+		<course courseCode="4650">
+			<booking>
+				<day weekday="MON">Monday</day>
+				<timeslot start="1030" end="12:20">10:30 to 12:20</timeslot>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<day weekday="MON">Monday</day>
+				<timeslot start="1630" end="17:20">16:30 to 17:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<timeslot start="1230" end="13:20">12:30 to 13:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+		</course>
+		<course courseCode="4620">
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<timeslot start="0830" end="10:20">08:30 to 10:20</timeslot>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+			<booking>
+				<day weekday="TUE">Tuesday</day>
+				<timeslot start="1530" end="17:20">15:30 to 17:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SW1-2020</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+		</course>
+		<course courseCode="4850">
+			<booking>
+				<day weekday="WED">Wednesday</day>
+				<timeslot start="1230" end="14:20">12:30 to 14:20</timeslot>
+				<courseType>Lec</courseType>
+				<room>SE6-207</room>
+				<instructor>James Parry</instructor>
+			</booking>
+			<booking>
+				<day weekday="THU">Thursday</day>
+				<timeslot start="1330" end="15:20">13:30 to 15:20</timeslot>
+				<courseType>Lab</courseType>
+				<room>SE12-308</room>
+				<instructor>James Parry</instructor>
+			</booking>
+		</course>
+	</courses>
 </timetable>
