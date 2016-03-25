@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-	<!DOCTYPE timetable SYSTEM "schedule.dtd"[
-		<!ENTITY days SYSTEM "days.xml">
-		<!ENTITY timeslots SYSTEM "timeslots.xml">
-		<!ENTITY courses SYSTEM "courses.xml">
-	]
-	>
-
-<timetable>
+<timetable xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="timetable.xsd">
 	<!-- 3 different faucets-->
 	&days;
 	&timeslots;
