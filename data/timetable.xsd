@@ -7,14 +7,48 @@
 	<!--***********************************************************
 	*************************XML Data Structure *******************
 	************************************************************-->
+	<!-- timetable element can have days, timeslots, and courses inside-->
+	<xs:element name="timetable">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="days" minOccurs="0"/>
+				<xs:element name="timeslots" minOccurs="0"/>
+				<xs:element name="courses" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	
-	<!--instructor element will have first and last name of an instructor 
-	which will be defined in xml-->
-	<xs:complexType>
-		<xs:sequence>
-			<xs:element name="instructor" type="personType"/>
-		</xs:sequence>
-	</xs:complexType>
+	<!-- days element will have day elements inside-->
+	<xs:element name="days">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="day" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- each day element will take in bookings-->
+	<xs:element name="day">
+		<xs:complexType>
+			<xs:sequence>
+			<xs:element name="booking" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="weekday" type="xs:weekdayT" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- booking will have timeslot, courseCode, courseType, room, and instructor-->
+	<xs:element name="booking">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="timeslot" type="timeslotT" maxOccurs="1"/>
+				<xs:element name="courseCode" type="courseCodeT" maxOccurs="1"/>
+				<xs:element name="courseType" type="courseTypeT" maxOccurs="1"/>
+				<xs:element name="room" type="roomT" maxOccurs="1"/>
+				<xs:element name="instructor" type="personType" maxOccurs="1"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
 	
 	<!--***********************************************************
 	*******************Data Types needed for validation************
@@ -32,12 +66,21 @@
 	</xs:simpleType>
 	
 	<!-- time is 4 digit time-->
-	<xs:simpleType name="time">
+	<xs:simpleType name="timeT">
 		<xs:restriction base="xs:integer">
 			<xs:pattern value="[0-2][0-9][0-5][0-9]" />
 		</xs:restriction>
 	</xs:simpleType>
 	
+	<xs:complexType name="timeslotT">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="start" type="xs:timeT"/>
+				<xs:attribute name="end" type="xs:timeT"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+
 	<!-- person type is a string>-->
 	<xs:complexType name="personType">
 		<xs:simpleContent>
@@ -69,6 +112,4 @@
 			<xs:pattern value="([A-Z]{2})\d{1,2}\s\d{3,4}" /> 
 		</xs:restriction>
 	</xs:simpleType>
-	
-
 </xs:schema>
