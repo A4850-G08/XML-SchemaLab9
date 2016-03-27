@@ -3,7 +3,7 @@
 <timetable xmlns:xsi="http://wwww.w3.org/2001/XMLSchema-instance" xsi:noNameSpaceSchemaLocation="timetable.xsd">
 	<!-- 3 different faucets-->
 	<days>
-		<day weekday="MON">
+		<day weekday="Monday">
 			<booking>
 				<timeslot start="1030" end="1220">10:30 to 12:20</timeslot>
 				<courseCode>4650</courseCode>
@@ -26,7 +26,7 @@
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 		</day>
-		<day weekday="TUE">
+		<day weekday="Tuesday">
 			<booking>
 				<timeslot start="0830" end="1020">08:30 to 10:20</timeslot>
 				<courseCode>4620</courseCode>
@@ -49,7 +49,7 @@
 				<instructor>Bethany Edmunds</instructor>
 			</booking>
 		</day>
-		<day weekday="WED">
+		<day weekday="Wednesday">
 			<booking>
 				<timeslot start="1230" end="1420">12:30 to 14:20</timeslot>
 				<courseCode>4850</courseCode>
@@ -58,7 +58,7 @@
 				<instructor>James Parry</instructor>
 			</booking>
 		</day>
-		<day weekday="THU">
+		<day weekday="Thursday">
 			<booking>
 				<timeslot start="0930" end="1020">09:30 to 10:20</timeslot>
 				<courseCode>4910</courseCode>
@@ -81,7 +81,7 @@
 				<instructor>James Parry</instructor>
 			</booking>
 		</day>
-		<day weekday="FRI">
+		<day weekday="Friday">
 			<booking>
 				<timeslot start="0830" end="1020">08:30 to 10:20</timeslot>
 				<courseCode>4660</courseCode>
@@ -108,14 +108,14 @@
 	<timeslots>
 		<timeslot start="0830" end="10:20">
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<courseCode>4620</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Bethany Edmunds</instructor>
 			</booking>
 			<booking>
-				<day weekday="FRI">Friday</day>
+				<day weekday="Friday"></day>
 				<courseCode>4660</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW9-206</room>
@@ -124,7 +124,7 @@
 		</timeslot>
 		<timeslot start="0930" end="10:20">
 			<booking>
-				<day weekday="THU">Thursday</day>
+				<day weekday="Thursday"></day>
 				<courseCode>4910</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-1205</room>
@@ -133,21 +133,21 @@
 		</timeslot>
 		<timeslot start="1030" end="12:20">
 			<booking>
-				<day weekday="MON">Monday</day>
+				<day weekday="Monday"></day>
 				<courseCode>4650</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<courseCode>4910</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
-				<day weekday="FRI">Friday</day>
+				<day weekday="Friday"></day>
 				<courseCode>4770</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
@@ -156,7 +156,7 @@
 		</timeslot>
 		<timeslot start="1230" end="13:20">
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<courseCode>4650</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
@@ -165,7 +165,7 @@
 		</timeslot>
 		<timeslot start="1230" end="14:20">
 			<booking>
-				<day weekday="WED">Wednesday</day>
+				<day weekday="Wednesday">Wednesdaynesday</day>
 				<courseCode>4850</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-207</room>
@@ -174,14 +174,14 @@
 		</timeslot>
 		<timeslot start="1330" end="15:20">
 			<booking>
-				<day weekday="THU">Thursday</day>
+				<day weekday="Thursday"></day>
 				<courseCode>4850</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-308</room>
 				<instructor>James Parry</instructor>
 			</booking>
 			<booking>
-				<day weekday="FRI">Friday</day>
+				<day weekday="Friday"></day>
 				<courseCode>4660</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-206</room>
@@ -190,7 +190,7 @@
 		</timeslot>
 		<timeslot start="1530" end="16:20">
 			<booking>
-				<day weekday="MON">Monday</day>
+				<day weekday="Monday"></day>
 				<courseCode>4910</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2005</room>
@@ -199,7 +199,7 @@
 		</timeslot>
 		<timeslot start="1630" end="17:20">
 			<booking>
-				<day weekday="MON">Monday</day>
+				<day weekday="Monday"></day>
 				<courseCode>4650</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
@@ -208,7 +208,7 @@
 		</timeslot>
 		<timeslot start="1530" end="17:20">
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<courseCode>4620</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2020</room>
@@ -219,21 +219,21 @@
 	<courses>
 		<course courseCode="4910">
 			<booking>
-				<day weekday="MON">Monday</day>
+				<day weekday="Monday"></day>
 				<timeslot start="1530" end="16:20">15:30 to 16:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SW1-2005</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
-				<day weekday="THU">Thursday</day>
+				<day weekday="Thursday"></day>
 				<timeslot start="0930" end="10:20">09:30 to 10:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SW5-1840</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
-				<day weekday="THU">Thursday</day>
+				<day weekday="Thursday"></day>
 				<timeslot start="1530" end="16:20">15:30 to 6:20</timeslot>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
@@ -242,14 +242,14 @@
 		</course>
 		<course courseCode="4660">
 			<booking>
-				<day weekday="FRI">Friday</day>
+				<day weekday="Friday"></day>
 				<timeslot start="0830" end="10:20">08:30 to 10:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SW9-206</room>
 				<instructor>Steve Fabiszewski</instructor>
 			</booking>
 			<booking>
-				<day weekday="FRI">Friday</day>
+				<day weekday="Friday"></day>
 				<timeslot start="13:30" end="15:20">13:30 to 15:20</timeslot>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
@@ -258,7 +258,7 @@
 		</course>
 		<course courseCode="4770">
 			<booking>
-				<day weekday="FRI">Friday</day>
+				<day weekday="Friday"></day>
 				<timeslot start="1030" end="12:20">10:30 to 12:20</timeslot>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
@@ -267,21 +267,21 @@
 		</course>
 		<course courseCode="4650">
 			<booking>
-				<day weekday="MON">Monday</day>
+				<day weekday="Monday"></day>
 				<timeslot start="1030" end="12:20">10:30 to 12:20</timeslot>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
-				<day weekday="MON">Monday</day>
+				<day weekday="Monday"></day>
 				<timeslot start="1630" end="17:20">16:30 to 17:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<timeslot start="1230" end="13:20">12:30 to 13:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
@@ -290,14 +290,14 @@
 		</course>
 		<course courseCode="4620">
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<timeslot start="0830" end="10:20">08:30 to 10:20</timeslot>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Bethany Edmunds</instructor>
 			</booking>
 			<booking>
-				<day weekday="TUE">Tuesday</day>
+				<day weekday="Tuesday"></day>
 				<timeslot start="1530" end="17:20">15:30 to 17:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SW1-2020</room>
@@ -306,14 +306,14 @@
 		</course>
 		<course courseCode="4850">
 			<booking>
-				<day weekday="WED">Wednesday</day>
+				<day weekday="Wednesday"></day>
 				<timeslot start="1230" end="14:20">12:30 to 14:20</timeslot>
 				<courseType>Lec</courseType>
 				<room>SE6-207</room>
 				<instructor>James Parry</instructor>
 			</booking>
 			<booking>
-				<day weekday="THU">Thursday</day>
+				<day weekday="Thursday"></day>
 				<timeslot start="1330" end="15:20">13:30 to 15:20</timeslot>
 				<courseType>Lab</courseType>
 				<room>SE12-308</room>

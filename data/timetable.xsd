@@ -57,11 +57,11 @@
 	<!-- weekdays have to be one of five-->
 	<xs:simpleType name="weekdayT">
 		<xs:restriction base="xs:string">
-			<xs:enumeration value="MON"/>
-			<xs:enumeration value="TUE"/>
-			<xs:enumeration value="WED"/>
-			<xs:enumeration value="THU"/>
-			<xs:enumeration value="FRI"/>
+			<xs:enumeration value="Monday"/>
+			<xs:enumeration value="Tuesday"/>
+			<xs:enumeration value="Wednesday"/>
+			<xs:enumeration value="Thursday"/>
+			<xs:enumeration value="Friday"/>
 		</xs:restriction>
 	</xs:simpleType>
 	
