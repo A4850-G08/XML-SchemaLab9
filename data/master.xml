@@ -115,7 +115,7 @@
 				<instructor>Bethany Edmunds</instructor>
 			</booking>
 			<booking>
-				<day weekday="FRI"></day>
+				<day weekday="FRI">Friday</day>
 				<courseCode>4660</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW9-206</room>
