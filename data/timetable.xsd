@@ -8,51 +8,64 @@
 	*************************XML Data Structure *******************
 	************************************************************-->
 	<!-- timetable element can have days, timeslots, and courses inside-->
-	<xs:element name="timetable">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="days" minOccurs="0"/>
-				<xs:element name="timeslots" minOccurs="0"/>
-				<xs:element name="courses" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+	<xs:complexType name="timetable">
+		<xs:sequence>
+			<xs:element name="days" minOccurs="0"/>
+			<xs:element name="timeslots" minOccurs="0"/>
+			<xs:element name="courses" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- ********************* Days Facet*************************-->
 	
 	<!-- days element will have day elements inside-->
-	<xs:element name="days">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="day" minOccurs="0"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+	<xs:complexType name="days">
+		<xs:sequence>
+			<xs:element name="day" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
 	
 	<!-- each day element will take in bookings-->
-	<xs:element name="day">
-		<xs:complexType>
-			<xs:sequence>
+	<xs:complexType name="day">
+		<xs:sequence>
 			<xs:element name="booking" minOccurs="0"/>
-			</xs:sequence>
-			<xs:attribute name="weekday" type="xs:weekdayT" use="required"/>
-		</xs:complexType>
-	</xs:element>
+		</xs:sequence>
+		<xs:attribute name="weekday" type="weekdayT" use="required"/>
+	</xs:complexType>
 	
-	<!-- booking will have timeslot, courseCode, courseType, room, and instructor-->
-	<xs:element name="booking">
-		<xs:complexType>
-			<xs:sequence>
-				<xs:element name="timeslot" type="timeslotT" maxOccurs="1"/>
-				<xs:element name="courseCode" type="courseCodeT" maxOccurs="1"/>
-				<xs:element name="courseType" type="courseTypeT" maxOccurs="1"/>
-				<xs:element name="room" type="roomT" maxOccurs="1"/>
-				<xs:element name="instructor" type="personType" maxOccurs="1"/>
-			</xs:sequence>
-		</xs:complexType>
-	</xs:element>
+	<!-- ********************* Courses Facet*************************-->
+	
+	<!-- Courses element will have course elements inside-->
+	<xs:complexType name="courses">
+		<xs:sequence>
+			<xs:element name="course" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- each course element will take in bookings-->
+	<xs:complexType name="course">
+		<xs:sequence>
+			<xs:element name="booking" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="weekday" type="weekdayT" use="required"/>
+		<xs:attribute name="timeslot" type="timeslotT" use="required"/>
+	</xs:complexType>
 	
 	<!--***********************************************************
 	*******************Data Types needed for validation************
 	************************************************************-->
+	
+	<!-- booking will have timeslot, courseCode, courseType, room, and instructor-->
+	<xs:complexType name="booking">
+		<xs:sequence>
+			<xs:element name="day" type="weekdayT" maxOccurs="1"/>
+			<xs:element name="timeslot" type="timeslotT" maxOccurs="1"/>
+			<xs:element name="courseCode" type="courseCodeT" maxOccurs="1"/>
+			<xs:element name="courseType" type="courseTypeT" maxOccurs="1"/>
+			<xs:element name="room" type="roomT" maxOccurs="1"/>
+			<xs:element name="instructor" type="instructorT" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
 	
 	<!-- weekdays have to be one of five-->
 	<xs:simpleType name="weekdayT">
@@ -68,7 +81,9 @@
 	<!-- time is 4 digit time-->
 	<xs:simpleType name="timeT">
 		<xs:restriction base="xs:integer">
-			<xs:pattern value="[0-2][0-9][0-5][0-9]" />
+			<xs:pattern value="[0-2][0-9]:[0-5][0-9]" />
+			<xs:minInclusive value="08:30" />
+			<xs:maxInclusive value="17:20" />
 		</xs:restriction>
 	</xs:simpleType>
 	
@@ -82,14 +97,10 @@
 	</xs:complexType>
 
 	<!-- person type is a string>-->
-	<xs:complexType name="personType">
-		<xs:simpleContent>
-			<xs:extension base="xs:string">
-				<xs:attribute name="firstName" type="xs:string"/>
-				<xs:attribute name="lastName" type="xs:string"/>
-			</xs:extension>
-		</xs:simpleContent>
-	</xs:complexType>
+	<xs:simpleType name="instructorT">
+		<xs:restriction base="xs:string">
+		</xs:restriction>
+	</xs:simpleType>
 
 	<!-- courseType have to be one of two-->
 	<xs:simpleType name="courseTypeT">
@@ -102,7 +113,7 @@
 	<!-- courseCode is a 4 digit number-->
 	<xs:simpleType name="courseCodeT">
 		<xs:restriction base="xs:integer">
-			<xs:pattern value="[0-9][0-9][0-9][0-9]" />
+			<xs:pattern value="d{4}" />
 		</xs:restriction>
 	</xs:simpleType>
 	
