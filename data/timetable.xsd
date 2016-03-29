@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema	version="1.0"
+			xmlns:xs="http://www.w3.org/2001/XMLSchema"
+			elementFormDefault="qualified">
+	
+	<!--***********************************************************
+	*************************XML Data Structure *******************
+	************************************************************-->
+	
+	<!-- timetable element can have days, timeslots, and courses inside-->
+	<xs:element name="timetable">
+		<xs:complexType>
+			<xs:all minOccurs="0" maxOccurs="1">
+				<xs:element name="days" type="daysT"/>
+				<xs:element name="timeslots" type="timeslotsT"/>
+				<xs:element name="courses" type="coursesT"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	
+	<!-- ********************* Days Facet*************************-->
+	<!-- days element will have day elements inside-->
+	<xs:complexType name="daysT">
+		<xs:sequence>
+			<xs:element name="day" type="dayT" minOccurs="0" maxOccurs="5"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- each day element will take in bookings-->
+	<xs:complexType name="dayT">
+		<xs:sequence>
+			<xs:element name="booking" type="bookingT" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="weekday" type="weekdayT" use="required"/>
+	</xs:complexType>
+	
+	<!-- ********************* Timeslots Facet*************************-->
+	<!-- timeslots element will have timeslot elements inside-->
+	<xs:complexType name="timeslotsT">
+		<xs:sequence>
+			<xs:element name="timeslot" type="timeslotT" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- each timeslot element will take in bookings-->
+	<xs:complexType name="timeslotT">
+		<xs:sequence>
+			<xs:element name="booking" type="bookingT" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="start" type="timeT" use="required"/>
+		<xs:attribute name="end" type="timeT" use="required"/>
+	</xs:complexType>
+
+	<!-- ********************* Courses Facet*************************-->
+	<!-- Courses element will have course elements inside-->
+	<xs:complexType name="coursesT">
+		<xs:sequence>
+			<xs:element name="course" type="courseT" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- each course element will take in bookings-->
+	<xs:complexType name="courseT">
+		<xs:sequence>
+			<xs:element name="booking" type="bookingT" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="courseCode" type="courseCodeT" use="required"/>
+	</xs:complexType>
+	
+
+	
+	<!-- booking will have timeslot, courseCode, courseType, room, and instructor-->
+	<xs:complexType name="bookingT">
+		<xs:sequence>
+			<xs:element name="day" type="dayT" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="timeslot" type="timeslotT" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="courseCode" type="courseCodeT" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="courseType" type="courseTypeT" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="room" type="roomT" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="instructor" type="instructorT" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!--***********************************************************
+	*******************Data Types needed for validation************
+	************************************************************-->
+
+	<!-- weekdays have to be one of five-->
+	<xs:simpleType name="weekdayT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Monday"/>
+			<xs:enumeration value="Tuesday"/>
+			<xs:enumeration value="Wednesday"/>
+			<xs:enumeration value="Thursday"/>
+			<xs:enumeration value="Friday"/>
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+	
+	<!-- time is 4 digit time-->
+	<xs:simpleType name="timeT">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[0-2][0-9]:[0-5][0-9]" />
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- courseCode is a 4 digit number-->
+	<xs:simpleType name="courseCodeT">
+		<xs:restriction base="xs:integer">
+			<xs:pattern value="\d{4}" />
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- courseType have to be one of two-->
+	<xs:simpleType name="courseTypeT">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Lab"/>
+			<xs:enumeration value="Lec"/>
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- weekdays have to be one of five-->
+	<xs:simpleType name="roomT">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{2}\d{1,2}-\d{3,4}" />
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!-- person type is a string>-->
+	<xs:simpleType name="instructorT">
+		<xs:restriction base="xs:string">
+			<xs:whiteSpace value="collapse"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
