@@ -20,7 +20,7 @@ class Timetable extends CI_Model
 		parent::__construct();
 		
 		//load the xml files
-		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
+		$this->xml = simplexml_load_file(DATAPATH . 'timetable' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
 		$record = array();
 		
 		//build a full list of days
