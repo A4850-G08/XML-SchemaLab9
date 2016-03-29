@@ -36,6 +36,22 @@
 	</xs:complexType>
 	
 	<!-- ********************* Timeslots Facet*************************-->
+	
+	<!-- timeslots element will have timeslot elements inside-->
+	<xs:complexType name="timeslotsT">
+		<xs:sequence>
+			<xs:element name="timeslot" type="timeslotT" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+	
+	<!-- each timeslot element will take in bookings-->
+	<xs:complexType name="timeslotT">
+		<xs:sequence>
+			<xs:element name="booking" type="bookingT" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+		<xs:attribute name="start" type="timeT" use="required"/>
+		<xs:attribute name="end" type="timeT" use="required"/>
+	</xs:complexType>
 
 	
 	

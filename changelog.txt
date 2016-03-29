@@ -1,6 +1,7 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+2016-03-28 17:12 - Finished the timeslots facet 
 2016-03-28 16:19 - Changed according to the validation error (regex for both room and courseCode)
 2016-03-28 14:10 - Created courses facet schema
 2016-03-27 14:00 - Added min and max time restriction in the schema
