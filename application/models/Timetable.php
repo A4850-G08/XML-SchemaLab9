@@ -1,4 +1,5 @@
 <?php
+
 /**
  *  This is a model for the control data in our timetable slots
  */
@@ -7,22 +8,20 @@ class Timetable extends CI_Model
 
 	protected $xml = null;
 	protected $schedule = null;
-	
 	protected $days = array();
 	protected $timeslots = array();
 	protected $courses = array();
-	
 	protected $daysDropdown = array();
 	protected $timeslotsDropdown = array();
 
 	public function __construct()
 	{
 		parent::__construct();
-		
+
 		//load the xml files
-		$this->xml = simplexml_load_file(DATAPATH . 'master' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
+		$this->xml = simplexml_load_file(DATAPATH . 'timetable' . XMLSUFFIX, "SimpleXMLElement", LIBXML_NOENT);
 		$record = array();
-		
+
 		//build a full list of days
 		foreach ($this->xml->days as $days)
 		{
@@ -33,7 +32,7 @@ class Timetable extends CI_Model
 				foreach ($day->booking as $booking)
 				{
 					$record['weekday'] = $day['weekday'];
-					
+
 					$timeslot = $booking[0]->timeslot;
 					$record['timeslot'] = $timeslot;
 					$record['start'] = $timeslot['start'];
@@ -52,7 +51,7 @@ class Timetable extends CI_Model
 					$record['instructor'] = $instructor;
 
 					//add records into days array
-					
+
 					$this->days[] = new Booking($record);
 				}
 				$this->daysDropdown[] = $record['weekday'];
@@ -134,25 +133,26 @@ class Timetable extends CI_Model
 	 * Search Methods by each Facet
 	 * ************************************************
 	 */
-	function searchTimetableByDay($day,$timeslot)
+
+	function searchTimetableByDay($day, $timeslot)
 	{
 		$results = array();
-		
-		foreach($this->days as $booking)
+
+		foreach ($this->days as $booking)
 		{
-			if($booking->weekday === $day && $booking->start === $timeslot)
+			if ($booking->weekday === $day && $booking->start === $timeslot)
 			{
 				$results[] = $booking;
 			}
 		}
-			return $results;
+		return $results;
 	}
-			
-	function searchTimetableByTimeslot($day, $timeslot) 
+
+	function searchTimetableByTimeslot($day, $timeslot)
 	{
 		$results = array();
 
-		foreach ($this->timeslots as $booking) 
+		foreach ($this->timeslots as $booking)
 		{
 			if ($booking->weekday === $day && $booking->start === $timeslot)
 			{
@@ -163,13 +163,13 @@ class Timetable extends CI_Model
 		return $results;
 	}
 
-	function searchTimetableByCourse($day, $timeslot) 
+	function searchTimetableByCourse($day, $timeslot)
 	{
 		$results = array();
 
-		foreach ($this->courses as $booking) 
+		foreach ($this->courses as $booking)
 		{
-			if ($booking->weekday === $day && $booking->start === $timeslot) 
+			if ($booking->weekday === $day && $booking->start === $timeslot)
 			{
 				$results[] = $booking;
 			}
@@ -183,6 +183,7 @@ class Timetable extends CI_Model
 	 * Accessors
 	 * ************************************************
 	 */
+
 	//retrieve a list of days 
 	function getDaysDropdown()
 	{
@@ -194,6 +195,7 @@ class Timetable extends CI_Model
 	{
 		return $this->timeslotsDropdown;
 	}
+
 	//retrieve a list of days as an assoc. array
 	function getDays()
 	{
@@ -212,10 +214,35 @@ class Timetable extends CI_Model
 		return isset($this->courses) ? $this->courses : null;
 	}
 
+	/**
+	 *  Server-side xml schema validation
+	 */
+	public function xmlValidate()
+	{
+		$doc = new DOMDocument();
+		$doc->load(DATAPATH . 'timetable.xml');
+		$schema = DATAPATH . 'timetable.xsd';
+		$results = array();
+		libxml_use_internal_errors(true);
+		if ($doc->schemaValidate($schema))
+		{
+			$results['xmlValidationResult'][]['message'] = "Server-side validation has been passed! You're error free!!";
+		} else
+		{
+			foreach (libxml_get_errors() as $error)
+			{
+				$results['xmlValidationResult'][]['message'] = $error->message;
+			}
+		}
+		libxml_clear_errors();
+		return $this->parser->parse('_xmlValidation', $results, true);
+	}
+
 }
 
 Class Booking extends CI_Model
 {
+
 	public $weekday = "";
 	public $start = "";
 	public $end = "";
@@ -226,7 +253,7 @@ Class Booking extends CI_Model
 	public $instructor = "";
 
 	// Constructor
-	public function __construct($detail=null)
+	public function __construct($detail = null)
 	{
 		$this->weekday = (String) $detail['weekday'];
 		$this->start = (String) $detail['start'];
@@ -237,4 +264,5 @@ Class Booking extends CI_Model
 		$this->room = (String) $detail['room'];
 		$this->instructor = (String) $detail['instructor'];
 	}
+
 }

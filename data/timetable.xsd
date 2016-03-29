@@ -36,7 +36,6 @@
 	</xs:complexType>
 	
 	<!-- ********************* Timeslots Facet*************************-->
-	
 	<!-- timeslots element will have timeslot elements inside-->
 	<xs:complexType name="timeslotsT">
 		<xs:sequence>
@@ -53,8 +52,6 @@
 		<xs:attribute name="end" type="timeT" use="required"/>
 	</xs:complexType>
 
-	
-	
 	<!-- ********************* Courses Facet*************************-->
 	<!-- Courses element will have course elements inside-->
 	<xs:complexType name="coursesT">

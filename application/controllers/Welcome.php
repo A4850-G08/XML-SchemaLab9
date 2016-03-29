@@ -10,6 +10,8 @@ class Welcome extends CI_Controller {
 		$data = array();
 		//our default title
 		$data['title'] = "Bookings";
+		
+		$data['xmlValidationResult'] = $this->timetable->xmlValidate();
 
 		/*************************
 		 * Booking by days
