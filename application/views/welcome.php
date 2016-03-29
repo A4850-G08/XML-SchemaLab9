@@ -8,6 +8,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 	</head>
 	<body>
 		<div id="content">
+			{xmlValidationResult}
 			<div class="container">
 				<div class="bookingsearch">
 					<h1>Search for courses!</h1>
