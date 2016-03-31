@@ -2,6 +2,8 @@ Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
 Lab 10 - Changelog
+2016-03-31 14:23 - Added reference to the xsl files in timeslots and days.xml
+2016-03-31 14:16 - Updated days and timeslots.xml because those files were out of date
 2016-03-31 14:05 - Turned template into timeslots.xsl and days.xsl
 2016-03-31 13:54 - Started up template for xsl
 2016-03-31 13:34 - Changelog for Lab 10 created
