@@ -13,12 +13,12 @@ Format of timeslots.xml
 	</timeslot>
 </timeslots>
 -->
-<?xml version="1.0" encoding="UTF-8"?>
+
 
 <?xml-stylesheet type="text/xsl" href="timeslots.xsl"?>
 <timetable>
 	<timeslots>
-		<timeslot start="08:30" end="10:20">
+		<timeslot start="08:30">
 			<booking>
 				<day weekday="Tuesday"></day>
 				<courseCode>4620</courseCode>
@@ -34,7 +34,7 @@ Format of timeslots.xml
 				<instructor>Steve Fabiszewski</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="09:30" end="10:20">
+		<timeslot start="09:30">
 			<booking>
 				<day weekday="Thursday"></day>
 				<courseCode>4910</courseCode>
@@ -43,7 +43,7 @@ Format of timeslots.xml
 				<instructor>Richard Chau</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="10:30" end="12:20">
+		<timeslot start="10:30">
 			<booking>
 				<day weekday="Monday"></day>
 				<courseCode>4650</courseCode>
@@ -66,7 +66,7 @@ Format of timeslots.xml
 				<instructor>Trevor Lord</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="12:30" end="13:20">
+		<timeslot start="12:30">
 			<booking>
 				<day weekday="Tuesday"></day>
 				<courseCode>4650</courseCode>
@@ -74,8 +74,6 @@ Format of timeslots.xml
 				<room>SE6-205</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
-		</timeslot>
-		<timeslot start="12:30" end="14:20">
 			<booking>
 				<day weekday="Wednesday"></day>
 				<courseCode>4850</courseCode>
@@ -84,7 +82,7 @@ Format of timeslots.xml
 				<instructor>James Parry</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="13:30" end="15:20">
+		<timeslot start="13:30">
 			<booking>
 				<day weekday="Thursday"></day>
 				<courseCode>4850</courseCode>
@@ -100,7 +98,7 @@ Format of timeslots.xml
 				<instructor>Steve Fabiszewski</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="15:30" end="16:20">
+		<timeslot start="15:30">
 			<booking>
 				<day weekday="Monday"></day>
 				<courseCode>4910</courseCode>
@@ -109,7 +107,7 @@ Format of timeslots.xml
 				<instructor>Richard Chau</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="16:30" end="17:20">
+		<timeslot start="16:30">
 			<booking>
 				<day weekday="Monday"></day>
 				<courseCode>4650</courseCode>
@@ -118,7 +116,7 @@ Format of timeslots.xml
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 		</timeslot>
-		<timeslot start="15:30" end="17:20">
+		<timeslot start="15:30">
 			<booking>
 				<day weekday="Tuesday"></day>
 				<courseCode>4620</courseCode>
