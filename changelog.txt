@@ -1,6 +1,10 @@
 Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
+Lab 10 - Changelog
+2016-03-31 13:34 - Changelog for Lab 10 created
+
+Lab 09 - Changelog
 2016-03-28 18:44 - Server-side validation methods are created and it also passed
 2016-03-28 17:54 - Local Validation passed
 2016-03-28 17:45 - Changed each booking to be a table instead each row being a table
