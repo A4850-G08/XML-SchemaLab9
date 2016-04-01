@@ -16,19 +16,52 @@
 				<title>Timetable XSL</title>
 			</head>
 			<body>
-				<h2>Days centric data</h2>
-				<xsl:call-template name="days"/>
-				<xsl:call-template name="timeslots"/>
+				<h2>Days-centric data</h2>
+				<table>
+					<xsl:call-template name="headings"/>
+					<xsl:apply-templates select="/timetable/days/day"/>
+				</table>
 			</body>
 		</html>
 	</xsl:template>
 	
-	<xsl:template name="days">
-		
+	<xsl:template name="headings">
+			<tr>
+				<th>Days</th>
+				<th>08:30</th>
+				<th>09:30</th>				
+				<th>10:30</th>
+				<th>11:30</th>
+				<th>12:30</th>
+				<th>13:30</th>
+				<th>14:30</th>
+				<th>15:30</th>
+				<th>16:30</th>
+			</tr>
 	</xsl:template>
 	
-	<xsl:template name="timeslots">
-		
+	<!-- handle a day of the week -->
+	<xsl:template match="day">
+		<tr>
+			<td>
+				<xsl:value-of select="./@weekday"/>
+			</td>
+			<xsl:for-each select="booking">
+				<xsl:sort select="./timeslot/@start"/>
+				<xsl:apply-templates select="."/>
+			</xsl:for-each>
+		</tr>
+	</xsl:template>
+	
+	<!-- handles a single booking -->
+	<xsl:template match="booking">
+		<xsl:if 
+		<td>
+			<xsl:value-of select="./courseCode"/><br/>
+			<xsl:value-of select="./courseType"/><br/>
+			<xsl:value-of select="./room"/><br/>
+			<xsl:value-of select="./instructor"/>
+		</td>
 	</xsl:template>
 
 </xsl:stylesheet>
