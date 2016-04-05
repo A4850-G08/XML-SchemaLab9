@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 	
 <!--
 Format of days.xml
@@ -14,107 +15,109 @@ Format of days.xml
 </days>
 -->
 
-<days>
-	<day weekday="MON">
-		<booking>
-			<timeslot start="1030" end="1220"></timeslot>
-			<courseCode>4650</courseCode>
-			<courseType>Lab</courseType>
-			<room>SE12-306</room>
-			<instructor>Medhat Elmasry</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1530" end="1620"></timeslot>
-			<courseCode>4910</courseCode>
-			<courseType>Lec</courseType>
-			<room>SW1-2005</room>
-			<instructor>Richard Chau</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1630" end="1720"></timeslot>
-			<courseCode>4650</courseCode>
-			<courseType>Lec</courseType>
-			<room>SE6-205</room>
-			<instructor>Medhat Elmasry</instructor>
-		</booking>
-	</day>
-	<day weekday="TUE">
-		<booking>
-			<timeslot start="0830" end="1020"></timeslot>
-			<courseCode>4620</courseCode>
-			<courseType>Lab</courseType>
-			<room>SE12-306</room>
-			<instructor>Bethany Edmunds</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1230" end="1320"></timeslot>
-			<courseCode>4650</courseCode>
-			<courseType>Lec</courseType>
-			<room>SE6-205</room>
-			<instructor>Medhat Elmasry</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1530" end="1720"></timeslot>
-			<courseCode>4620</courseCode>
-			<courseType>Lec</courseType>
-			<room>SW1-2020</room>
-			<instructor>Bethany Edmunds</instructor>
-		</booking>
-	</day>
-	<day weekday="WED">
-		<booking>
-			<timeslot start="1230" end="1420"></timeslot>
-			<courseCode>4850</courseCode>
-			<courseType>Lec</courseType>
-			<room>SE6-207</room>
-			<instructor>James Parry</instructor>
-		</booking>
-	</day>
-	<day weekday="THU">
-		<booking>
-			<timeslot start="0930" end="1020"></timeslot>
-			<courseCode>4910</courseCode>
-			<courseType>Lec</courseType>
-			<room>SW1-1205</room>
-			<instructor>Richard Chau</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1030" end="1220"></timeslot>
-			<courseCode>4910</courseCode>
-			<courseType>Lab</courseType>
-			<room>SE12-306</room>
-			<instructor>Richard Chau</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1330" end="1520"></timeslot>
-			<courseCode>4850</courseCode>
-			<courseType>Lab</courseType>
-			<room>SE12-308</room>
-			<instructor>James Parry</instructor>
-		</booking>
-	</day>
-	<day weekday="FRI">
-		<booking>
-			<timeslot start="0830" end="1020"></timeslot>
-			<courseCode>4660</courseCode>
-			<courseType>Lec</courseType>
-			<room>SW9-206</room>
-			<instructor>Steve Fabiszewski</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1030" end="1220"></timeslot>
-			<courseCode>4770</courseCode>
-			<courseType>Lab</courseType>
-			<room>SE12-306</room>
-			<instructor>Trevor Lord</instructor>
-		</booking>
-		<booking>
-			<timeslot start="1330" end="1530"></timeslot>
-			<courseCode>4660</courseCode>
-			<courseType>Lab</courseType>
-			<room>SE12-306</room>
-			<instructor>Steve Fabiszewski</instructor>
-		</booking>
-	</day>
-	
-</days>
+<?xml-stylesheet type="text/xsl" href="days.xsl"?>
+<timetable>
+	<days>
+		<day weekday="Monday">
+			<booking>
+				<timeslot start="10:30" end="12:20"></timeslot>
+				<courseCode>ACIT 4650</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<timeslot start="15:30" end="16:20"></timeslot>
+				<courseCode>ACIT 4910</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2005</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<timeslot start="16:30" end="17:20"></timeslot>
+				<courseCode>ACIT 4650</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+		</day>
+		<day weekday="Tuesday">
+			<booking>
+				<timeslot start="08:30" end="10:20"></timeslot>
+				<courseCode>ACIT 4620</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+			<booking>
+				<timeslot start="12:30" end="13:20"></timeslot>
+				<courseCode>ACIT 4650</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-205</room>
+				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<timeslot start="15:30" end="17:20"></timeslot>
+				<courseCode>ACIT 4620</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2020</room>
+				<instructor>Bethany Edmunds</instructor>
+			</booking>
+		</day>
+		<day weekday="Wednesday">
+			<booking>
+				<timeslot start="12:30" end="14:20"></timeslot>
+				<courseCode>ACIT 4850</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-207</room>
+				<instructor>James Parry</instructor>
+			</booking>
+		</day>
+		<day weekday="Thursday">
+			<booking>
+				<timeslot start="09:30" end="10:20"></timeslot>
+				<courseCode>ACIT 4910</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-1205</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<timeslot start="10:30" end="12:20"></timeslot>
+				<courseCode>ACIT 4910</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Richard Chau</instructor>
+			</booking>
+			<booking>
+				<timeslot start="13:30" end="15:20"></timeslot>
+				<courseCode>ACIT 4850</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-308</room>
+				<instructor>James Parry</instructor>
+			</booking>
+		</day>
+		<day weekday="Friday">
+			<booking>
+				<timeslot start="08:30" end="10:20"></timeslot>
+				<courseCode>ACIT 4660</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW9-206</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+			<booking>
+				<timeslot start="10:30" end="12:20"></timeslot>
+				<courseCode>ACIT 4770</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Trevor Lord</instructor>
+			</booking>
+			<booking>
+				<timeslot start="13:30" end="15:30"></timeslot>
+				<courseCode>ACIT 4660</courseCode>
+				<courseType>Lab</courseType>
+				<room>SE12-306</room>
+				<instructor>Steve Fabiszewski</instructor>
+			</booking>
+		</day>
+	</days>
+</timetable>
