@@ -20,14 +20,14 @@ Format of timeslots.xml
 		<timeslot start="08:30">
 			<booking>
 				<day weekday="Tuesday"></day>
-				<courseCode>4620</courseCode>
+				<courseCode>ACIT 4620</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Bethany Edmunds</instructor>
 			</booking>
 			<booking>
 				<day weekday="Friday"></day>
-				<courseCode>4660</courseCode>
+				<courseCode>ACIT 4660</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW9-206</room>
 				<instructor>Steve Fabiszewski</instructor>
@@ -36,21 +36,21 @@ Format of timeslots.xml
 		<timeslot start="09:30">
 			<booking>
 				<day weekday="Tuesday"></day>
-				<courseCode>4620</courseCode>
+				<courseCode>ACIT 4620</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Bethany Edmunds</instructor>
 			</booking>
 			<booking>
 				<day weekday="Thursday"></day>
-				<courseCode>4910</courseCode>
+				<courseCode>ACIT 4910</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-1205</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
 				<day weekday="Friday"></day>
-				<courseCode>4660</courseCode>
+				<courseCode>ACIT 4660</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW9-206</room>
 				<instructor>Steve Fabiszewski</instructor>
@@ -59,21 +59,21 @@ Format of timeslots.xml
 		<timeslot start="10:30">
 			<booking>
 				<day weekday="Monday"></day>
-				<courseCode>4650</courseCode>
+				<courseCode>ACIT 4650</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Thursday"></day>
-				<courseCode>4910</courseCode>
+				<courseCode>ACIT 4910</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2005</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
 				<day weekday="Friday"></day>
-				<courseCode>4770</courseCode>
+				<courseCode>ACIT 4770</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Trevor Lord</instructor>
@@ -82,21 +82,21 @@ Format of timeslots.xml
 		<timeslot start="11:30">
 			<booking>
 				<day weekday="Monday"></day>
-				<courseCode>4650</courseCode>
+				<courseCode>ACIT 4650</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Thursday"></day>
-				<courseCode>4910</courseCode>
+				<courseCode>ACIT 4910</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2005</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
 				<day weekday="Friday"></day>
-				<courseCode>4770</courseCode>
+				<courseCode>ACIT 4770</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-306</room>
 				<instructor>Trevor Lord</instructor>
@@ -105,14 +105,14 @@ Format of timeslots.xml
 		<timeslot start="12:30">
 			<booking>
 				<day weekday="Tuesday"></day>
-				<courseCode>4650</courseCode>
+				<courseCode>ACIT 4650</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Wednesday"></day>
-				<courseCode>4850</courseCode>
+				<courseCode>ACIT 4850</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-207</room>
 				<instructor>James Parry</instructor>
@@ -121,21 +121,21 @@ Format of timeslots.xml
 		<timeslot start="13:30">
 			<booking>
 				<day weekday="Wednesday"></day>
-				<courseCode>4850</courseCode>
+				<courseCode>ACIT 4850</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-207</room>
 				<instructor>James Parry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Thursday"></day>
-				<courseCode>4850</courseCode>
+				<courseCode>ACIT 4850</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-308</room>
 				<instructor>James Parry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Friday"></day>
-				<courseCode>4660</courseCode>
+				<courseCode>ACIT 4660</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-206</room>
 				<instructor>Steve Fabiszewski</instructor>
@@ -144,14 +144,14 @@ Format of timeslots.xml
 		<timeslot start="14:30">
 			<booking>
 				<day weekday="Thursday"></day>
-				<courseCode>4850</courseCode>
+				<courseCode>ACIT 4850</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-308</room>
 				<instructor>James Parry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Friday"></day>
-				<courseCode>4660</courseCode>
+				<courseCode>ACIT 4660</courseCode>
 				<courseType>Lab</courseType>
 				<room>SE12-206</room>
 				<instructor>Steve Fabiszewski</instructor>
@@ -160,14 +160,14 @@ Format of timeslots.xml
 		<timeslot start="15:30">
 			<booking>
 				<day weekday="Monday"></day>
-				<courseCode>4910</courseCode>
+				<courseCode>ACIT 4910</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2005</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
 				<day weekday="Tuesday"></day>
-				<courseCode>4620</courseCode>
+				<courseCode>ACIT 4620</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2020</room>
 				<instructor>Bethany Edmunds</instructor>
@@ -176,14 +176,14 @@ Format of timeslots.xml
 		<timeslot start="16:30">
 			<booking>
 				<day weekday="Monday"></day>
-				<courseCode>4650</courseCode>
+				<courseCode>ACIT 4650</courseCode>
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
 				<day weekday="Tuesday"></day>
-				<courseCode>4620</courseCode>
+				<courseCode>ACIT 4620</courseCode>
 				<courseType>Lec</courseType>
 				<room>SW1-2020</room>
 				<instructor>Bethany Edmunds</instructor>
