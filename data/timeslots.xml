@@ -14,7 +14,6 @@ Format of timeslots.xml
 </timeslots>
 -->
 
-
 <?xml-stylesheet type="text/xsl" href="timeslots.xsl"?>
 <timetable>
 	<timeslots>
@@ -66,10 +65,10 @@ Format of timeslots.xml
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
-				<day weekday="Tuesday"></day>
+				<day weekday="Thursday"></day>
 				<courseCode>4910</courseCode>
-				<courseType>Lab</courseType>
-				<room>SE12-306</room>
+				<courseType>Lec</courseType>
+				<room>SW1-2005</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
@@ -89,10 +88,10 @@ Format of timeslots.xml
 				<instructor>Medhat Elmasry</instructor>
 			</booking>
 			<booking>
-				<day weekday="Tuesday"></day>
+				<day weekday="Thursday"></day>
 				<courseCode>4910</courseCode>
-				<courseType>Lab</courseType>
-				<room>SE12-306</room>
+				<courseType>Lec</courseType>
+				<room>SW1-2005</room>
 				<instructor>Richard Chau</instructor>
 			</booking>
 			<booking>
@@ -120,6 +119,13 @@ Format of timeslots.xml
 			</booking>
 		</timeslot>
 		<timeslot start="13:30">
+			<booking>
+				<day weekday="Wednesday"></day>
+				<courseCode>4850</courseCode>
+				<courseType>Lec</courseType>
+				<room>SE6-207</room>
+				<instructor>James Parry</instructor>
+			</booking>
 			<booking>
 				<day weekday="Thursday"></day>
 				<courseCode>4850</courseCode>
@@ -174,6 +180,13 @@ Format of timeslots.xml
 				<courseType>Lec</courseType>
 				<room>SE6-205</room>
 				<instructor>Medhat Elmasry</instructor>
+			</booking>
+			<booking>
+				<day weekday="Tuesday"></day>
+				<courseCode>4620</courseCode>
+				<courseType>Lec</courseType>
+				<room>SW1-2020</room>
+				<instructor>Bethany Edmunds</instructor>
 			</booking>
 		</timeslot>
 	</timeslots>
