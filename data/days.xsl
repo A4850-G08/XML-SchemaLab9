@@ -55,7 +55,6 @@
 	
 	<!-- handles a single booking -->
 	<xsl:template match="booking">
-		<xsl:if 
 		<td>
 			<xsl:value-of select="./courseCode"/><br/>
 			<xsl:value-of select="./courseType"/><br/>
