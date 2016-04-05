@@ -2,6 +2,8 @@ Newest at the top
 YYYY-MM-DD HR:MIN - comment
 
 Lab 10 - Changelog
+2016-04-05 11:15 - Fixed typo
+2016-04-05 11:15 - Finished timelots.xsl
 2016-03-31 17:32 - Filled in most of days.xsl but needs a bit more work
 2016-03-31 17:12 - Data displaying in all existing timeslots, but with duplicates
 2016-03-31 14:23 - Added reference to the xsl files in timeslots and days.xml

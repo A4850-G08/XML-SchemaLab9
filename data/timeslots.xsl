@@ -17,7 +17,7 @@
 			</head>
 			<body>
 				<h2>Timeslots Centric Data</h2>
-				<table>
+				<table border="1">
 					<xsl:call-template name="headings"/>
 					<xsl:apply-templates select="timetable/timeslots/timeslot"/>
 				</table>
@@ -26,7 +26,7 @@
 	</xsl:template> 
 	
 	<xsl:template name="headings">
-		<thead>
+		<thead style="background:blue; color:white;">
 			<tr>
 				<th>Start Time</th>
 				<th>Monday</th>
@@ -44,61 +44,75 @@
 				<xsl:value-of select="./@start"/>
 			</td>
 			<td>
-				<xsl:if test="booking/day/@weekday='Monday'">
-					<xsl:value-of select="booking/courseCode"/> 
-					<br/>
-					<xsl:value-of select="booking/courseType"/> 
-					<br/>
-					<xsl:value-of select="booking/room"/> 
-					<br/>
-					<xsl:value-of select="booking/instructor"/>
-				</xsl:if>
+				<xsl:for-each select="booking">
+					<xsl:if test="day/@weekday='Monday'">
+						<xsl:value-of select="./courseCode"/> 
+						<br/>
+						<xsl:value-of select="./courseType"/> 
+						<br/>
+						<xsl:value-of select="./room"/> 
+						<br/>
+						<xsl:value-of select="./instructor"/>
+						<br/>
+					</xsl:if>
+				</xsl:for-each>
 			</td>
 			<td>
-				<xsl:if test="booking/day/@weekday='Tuesday'">
-					<xsl:value-of select="booking/courseCode"/> 
-					<br/>
-					<xsl:value-of select="booking/courseType"/> 
-					<br/>
-					<xsl:value-of select="booking/room"/> 
-					<br/>
-					<xsl:value-of select="booking/instructor"/>
-				</xsl:if>
+				<xsl:for-each select="booking">
+					<xsl:if test="day/@weekday='Tuesday'">
+						<xsl:value-of select="./courseCode"/> 
+						<br/>
+						<xsl:value-of select="./courseType"/> 
+						<br/>
+						<xsl:value-of select="./room"/> 
+						<br/>
+						<xsl:value-of select="./instructor"/>
+						<br/>
+					</xsl:if>
+				</xsl:for-each>
 			</td>
 			<td>
-				<xsl:if test="booking/day/@weekday='Wednesday'">
-					<xsl:value-of select="booking/courseCode"/> 
-					<br/>
-					<xsl:value-of select="booking/courseType"/> 
-					<br/>
-					<xsl:value-of select="booking/room"/> 
-					<br/>
-					<xsl:value-of select="booking/instructor"/>
-				</xsl:if>
+				<xsl:for-each select="booking">
+					<xsl:if test="day/@weekday='Wednesday'">
+						<xsl:value-of select="./courseCode"/> 
+						<br/>
+						<xsl:value-of select="./courseType"/> 
+						<br/>
+						<xsl:value-of select="./room"/> 
+						<br/>
+						<xsl:value-of select="./instructor"/>
+						<br/>
+					</xsl:if>
+				</xsl:for-each>
 			</td>
 			<td>
-				<xsl:if test="booking/day/@weekday='Thursday'">
-					<xsl:value-of select="booking/courseCode"/> 
-					<br/>
-					<xsl:value-of select="booking/courseType"/> 
-					<br/>
-					<xsl:value-of select="booking/room"/> 
-					<br/>
-					<xsl:value-of select="booking/instructor"/>
-				</xsl:if>
+				<xsl:for-each select="booking">
+					<xsl:if test="day/@weekday='Thursday'">
+						<xsl:value-of select="./courseCode"/> 
+						<br/>
+						<xsl:value-of select="./courseType"/> 
+						<br/>
+						<xsl:value-of select="./room"/> 
+						<br/>
+						<xsl:value-of select="./instructor"/>
+						<br/>
+					</xsl:if>
+				</xsl:for-each>
 			</td>
 			<td>
-				<xsl:if test="booking/day/@weekday='Friday'">
-					<xsl:value-of select="booking/courseCode"/> 
-					<br/>
-					<xsl:value-of select="booking/courseType"/> 
-					<br/>
-					<xsl:value-of select="booking/room"/> 
-					<br/>
-					<xsl:value-of select="booking/instructor"/>
-				</xsl:if>
+				<xsl:for-each select="booking">
+					<xsl:if test="day/@weekday='Friday'">
+						<xsl:value-of select="./courseCode"/> 
+						<br/>
+						<xsl:value-of select="./courseType"/> 
+						<br/>
+						<xsl:value-of select="./room"/> 
+						<br/>
+						<xsl:value-of select="./instructor"/>
+						<br/>
+					</xsl:if>
+				</xsl:for-each>
 			</td>
 		</tr>
 	</xsl:template>
-	
 </xsl:stylesheet>
